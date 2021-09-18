@@ -129,7 +129,7 @@ Por questão de padrão de nomenclatura costumo nomear as branchs com prefixo do
 Crie um novo branch chamado "feature/Navbar" e selecione-o usando:
   
 ```bash
-$ git checkout -b feature/Navbar
+$ git checkout -b doc/CreateBranchSection
 ```
 retorne para o main usando
   

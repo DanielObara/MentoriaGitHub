@@ -78,18 +78,15 @@ Seus repositórios locais consistem em três "árvores" mantidas pelo git. A pri
 ## Adicionar & Confirmar
 
 Você pode propor mudanças (adicioná-las ao Index) usando:
-Para adicionar um arquivo em particular
 
 ```bash
+# Para adicionar um arquivo em particular
 $ git add caminho/até/o/arquivo
-```
-ou para adicionar todas as alterações:
 
-```bash
+# Ou para adicionar todas as alterações:
 $ git add .
 
 # ou pode-se usar *
-
 $ git add *
 ```
 Este é o primeiro passo no fluxo de atualizar o repositorio de forma básica do git. 

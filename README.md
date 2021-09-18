@@ -187,7 +187,10 @@ Branch 'doc/CreateBranchSection' set up to track remote branch 'doc/CreateBranch
 </p>
 
 Pronto! Sua branch foi enviada ao remoto e só falta você ir no github e fazer um pull request.
+## Fazendo o Pull Request
+Para fazer o pull request utilizaremos a interface web do github.
 
+Acesse o repositório que deseja fazer o Pull Request, é necessário que tenha feito os passos anteriores (criação da branch, add, commit e push), haverá um botão para clicar e solicitar um pull request.
 ## Atualizar & mesclar (merge)
 
 Para atualizar seu repositório local com a versão mais nova, na sua pasta de trabalho e via terminal execute o comando:

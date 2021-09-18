@@ -2,6 +2,25 @@
     <img alt="Imagem icone git + github" src=".github/git-and-github.png" width="450px" />
 </h1>
 
+<p align="center">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/DanielObara/MentoriaGitHub">
+	
+  <a href="https://www.linkedin.com/in/danielobara/">
+    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-DanielObara-%2304D361">
+  </a>
+
+  <a href="https://github.com/DanielObara/MentoriaGitHub/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DanielObara/MentoriaGitHub">
+  </a>
+
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/DanielObara/MentoriaGitHub/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/DanielObara/MentoriaGitHub?style=social">
+  </a>
+</p>
+
 ## Resumidão (do clone ao push)
 Se você já sabe executar todo o fluxo e só quer relembrar, deixo abaixo o fluxo (básico e sem criação de branch) resumido mas se voce quiser saber detalhadamente recomendo prosseguir a leitura.
 

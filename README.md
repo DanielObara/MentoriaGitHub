@@ -1,4 +1,6 @@
-# Mentoria sobre GitHub
+<h1 align="center">
+    <img alt="Imagem icone git + github" src=".github/git-and-github.png" width="450px" />
+</h1>
 
 ## Resumidão (do clone ao push)
 Se você já sabe executar todo o fluxo e só quer relembrar, deixo abaixo o fluxo (básico e sem criação de branch) resumido mas se voce quiser saber detalhadamente recomendo prosseguir a leitura.
@@ -31,17 +33,27 @@ Quando usar um servidor remoto, por exemplo o GitHub, seu comando será:
 ```bash
 $ git clone https://github.com/DanielObara/MentoriaGitHub
 ```
-O endereço do servidor remoto (repositório) e o link que você pode pegar clicando no botão code.
+O endereço do servidor remoto (repositório) o endereço (link) você pode obter clicando no botão code na página do repositório. 
 
-Para acessar o projeto recém clonado, acesse a pasta do projeto e caso tenha acessado via terminal digite `code .`,
-se não clique com o botão direito dentro da pasta e veja se tem a opção de abrir no VSCode.
+Exemplo abaixo:
+
+<p align="center">
+  <img src=".github/btn-to-clone.png" alt="Imagem demonstrando o botão verde para clonar o repositório"></img>
+</p>
+
+Para acessar o projeto recém clonado, acesse a pasta do projeto e caso tenha acessado via terminal digite:
+
+```bash 
+$ code .
+```
+Caso não seja via terminal clique com o botão direito dentro da pasta e veja se tem a opção de abrir no VSCode.
 
 ## Atualizando o repositório remoto:
 
 Seus repositórios locais consistem em três "árvores" mantidas pelo git. A primeira delas é sua Working Directory que contém os arquivos atuais, a segunda Index / Stage que funciona como uma área temporária e finalmente a HEAD que aponta para o último commit (confirmação) que você fez.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/42970570/133843768-083e637d-5004-4582-8d45-eb1cf7263a0e.png" alt="Imagem demonstrando as três arvores (uma pasta que é o diretório de trabalho seguida de uma estrutura que é a index / stage e depois a estrutura concretizada que se torna a head)" ></img>
+  <img src="./.github/trees.png" alt="Imagem demonstrando as três arvores (uma pasta que é o diretório de trabalho seguida de uma estrutura que é a index / stage e depois a estrutura concretizada que se torna a head)" ></img>
 </p>
 
 ## Adicionar & Confirmar
@@ -96,10 +108,96 @@ $ git remote add origin git@github.com:DanielObara/MentoriaGitHub.git
 
 Agora você é capaz de enviar suas alterações para o servidor remoto selecionado.
 
-## Qual a situação atual?
-Para verificar o que foi feito e qual a situação (Se está atualizado ou se tem modificações)
+## Criando o branch
+
+Branches ("ramos") são utilizados para desenvolver funcionalidades isoladas umas das outras. O branch main é o branch "padrão" quando você cria um repositório. Use outros branches para desenvolver e junte-os (merge) ao branch main após a conclusão.
+
+Por questão de padrão de nomenclatura costumo nomear as branchs com prefixo do que ela significa. Por exemplo:
+
+- bugfix/
+ <p>Branch de um bug que necessita ser corrigido.</p>
+
+- feature/
+<p>Uma nova feature que será adicionada ao projeto.</p>
+
+- refactor/
+<p>Quando precisamos fazer uma melhoria em algum trecho do código</p>
+
+- doc/
+<p>Quando fazemos alguma alteração ou criação de documentações</p>
+
+Crie um novo branch chamado "feature/Navbar" e selecione-o usando:
+  
+```bash
+$ git checkout -b feature/Navbar
+```
+retorne para o main usando
+  
+```bash
+$ git checkout main
+```
+
+e remova o branch da seguinte forma
+  
+```bash
+$ git branch -d doc/CreateBranchSection
+```
+
+Um branch não está disponível aos outros a menos que você envie o branch para seu repositório remoto.
+
+Ao tentar efetuar o push, receberá a seguinte mensagem no terminal:
+
+<p align="center">
+  <img src="./.github/--set-upstream.png" alt="Imagem demonstrando mensagem no terminal. Mensagem: To push the current branch and set the remote as upstream, use git push --set-upstream origin doc/CreateBranchSection"></img>
+</p>
 
 ```bash
-git status
-
+$ git push --set-upstream origin doc/CreateBranchSection
 ```
+Após isso a branch será enviada ao repositório remoto e você obterá a seguinte resposta em seu terminal:
+
+<p align="center">
+  <img src="./.github/setup-track-remote-branch.png" alt="Imagem demonstrando mensagem de sucesso de upload do branch ao remoto. Mensagem: Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'doc/CreateBranchSection' on GitHub by visiting:
+remote:      https://github.com/DanielObara/MentoriaGitHub/pull/new/doc/CreateBranchSection
+remote: 
+To https://github.com/DanielObara/MentoriaGitHub.git
+ * [new branch]      doc/CreateBranchSection -> doc/CreateBranchSection
+Branch 'doc/CreateBranchSection' set up to track remote branch 'doc/CreateBranchSection' from 'origin'."></img>
+</p>
+
+## Qual a situação atual (git status)?
+Para verificar o que foi feito e qual a situação (Se está atualizado ou se tem modificações) execute o comando abaixo:
+
+```bash
+$ git status
+```
+
+Após executar git status você verá qual branch se encontra e quais as alterações e arquivos não monitorados pelo git.
+
+<p align="center">
+  <img src="./.github/git-status.png" alt="Imagem demonstrando mensagem após execução do comando git status: No ramo doc/CreateBranchSection
+Your branch is up to date with 'origin/doc/CreateBranchSection'.
+Changes not staged for commit:
+  (utilize git add <arquivo>... para atualizar o que será submetido)
+  (use git restore <file>... to discard changes in working directory)
+        modified:   README.md
+Arquivos não monitorados:
+  (utilize git add <arquivo>... para incluir o que será submetido)
+        .github/
+nenhuma modificação adicionada à submissão (utilize git add e/ou git commit -a)"></img>
+</p>
+
+## Como contribuir com este repositório?
+
+- Crie um fork;
+- Crie um branch com suas features: `git checkout -b feature/my-feature`;
+- Commit suas alterações: `git commit -m 'feat: My new feature'`;
+- Faça um push com a sua branch `git push origin my-feature`;
+- Crie um pull request no GitHub.
+
+Após mergeado voce receberá a mensagem de que foi concluído e poderá deletar sua branch.
+
+
+Made with ♥ by Daniel Obara :wave: [Get in touch!](https://www.linkedin.com/in/danielobara/)

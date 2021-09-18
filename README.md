@@ -1,6 +1,6 @@
 # Mentoria sobre GitHub
 
-## Resumidão (clone até atualizar remoto)
+## Resumidão (do clone ao push)
 Se você já sabe executar todo o fluxo e só quer relembrar, deixo abaixo o fluxo (básico e sem criação de branch) resumido mas se voce quiser saber detalhadamente recomendo prosseguir a leitura.
 
 ```bash

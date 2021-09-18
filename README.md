@@ -255,3 +255,5 @@ Após mergeado voce receberá a mensagem de que foi concluído e poderá deletar
 
 
 Made with ♥ by Daniel Obara :wave: [Get in touch!](https://www.linkedin.com/in/danielobara/)
+
+Fontes: [Git](https://git-scm.com/), [rogerdudler](https://rogerdudler.github.io/git-guide/index.pt_BR.html) & [GitHub - Docs](https://docs.github.com/pt)

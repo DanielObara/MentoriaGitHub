@@ -186,6 +186,41 @@ To https://github.com/DanielObara/MentoriaGitHub.git
 Branch 'doc/CreateBranchSection' set up to track remote branch 'doc/CreateBranchSection' from 'origin'."></img>
 </p>
 
+Pronto! Sua branch foi enviada ao remoto e só falta você ir no github e fazer um pull request.
+
+## Atualizar & mesclar (merge)
+
+Para atualizar seu repositório local com a versão mais nova, na sua pasta de trabalho e via terminal execute o comando:
+
+```bash
+$ git pull
+```
+
+Para fazer merge de um outro branch ao seu branch ativo. 
+Supondo que você esteja na main e quer mesclar a branch doc/CreateBranchSection na main, use:
+
+```bash
+$ git merge doc/CreateBranchSection
+```
+
+Ou pode ser o inverso, atualizar a sua branch com a main.
+Em ambos os casos o git tenta fazer o merge das alterações automaticamente.
+
+Infelizmente, isto nem sempre é possível e resulta em conflitos. Você é responsável por fazer o merge estes conflitos manualmente editando os arquivos exibidos pelo git. Depois de alterar, você precisa marcá-los como merged com o seguinte comando:
+
+```bash
+$ git add .
+# Ou
+$ git add <NomeDoArquivo>
+```
+
+Antes de fazer o merge das alterações, você pode também pré-visualizá-as usando
+
+```bash
+$ git diff <branch origem> <branch destino>
+# ficaria assim: 
+$ git diff doc/UpdateAndMerge main
+```
 ## Qual a situação atual (git status)?
 Para verificar o que foi feito e qual a situação (Se está atualizado ou se tem modificações) execute o comando abaixo:
 

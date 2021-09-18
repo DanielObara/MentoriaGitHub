@@ -183,10 +183,31 @@ To https://github.com/DanielObara/MentoriaGitHub.git
 Branch 'doc/CreateBranchSection' set up to track remote branch 'doc/CreateBranchSection' from 'origin'."></img>
 </p>
 
-Pronto! Sua branch foi enviada ao remoto e só falta você ir no github e fazer um pull request.
+Pronto! Seu branch foi enviada ao remoto e só falta você ir no github e fazer um pull request.
+## Fazendo o Pull Request
+Para fazer o pull request utilizaremos a interface web do github.
+
+Acesse o repositório que deseja fazer o Pull Request, é necessário que tenha feito os passos anteriores (criação do branch, add, commit e push), haverá uma nova caixa de informação informando que seu branch teve alterações recentes e um botão para comparar e solicitar um pull request.
+
+<p align="center">
+  <img src="./.github/create-pull-request.png" alt="Imagem demonstrando o github e as informações de sua nova branch e com botão de comparar & pull request"></img>
+</p>
+
+Ao clicar no botão será redirecionado para uma nova página onde haverá um campo para colocar o título e a descrição da sua solicitação.
+
+Caso queira poderá selecionar quais as branchs quer mesclar, mas por padrão já fica selecionado a main com a sua branch. (base: main <- compare: NomeDaSuaBranch)
+
+Depois disso só clicar em Create Pull Request ou Criar pull request caso esteja em português.
+
+<p align="center">
+  <img src="./.github/description-pull-request.png" alt="Imagem demonstrando a página para inserir as informações de título, descrição e quais as branchs quer mesclar (mergear)"></img>
+</p>
+
+Há mais informações na tela no qual você poderá atrituir a quem quer que faça a revisão, de quem é a tarefa ou assinada à quem, labels, qual projeto etc. Porém essas são informações para se utilizar futuramente.
+
+**Observação: Caso sua branch esteja com código em andamento, poderá colocar no início do título a sigla WIP que significa Work in Progress, ou seja a pessoa responsável por aceitar seu pull request não ira mesclar até que esteja finalizado.
 
 ## Atualizar & mesclar (merge)
-
 Para atualizar seu repositório local com a versão mais nova, na sua pasta de trabalho e via terminal execute o comando:
 
 ```bash

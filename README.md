@@ -203,7 +203,7 @@ Depois disso só clicar em Create Pull Request ou Criar pull request caso esteja
   <img src="./.github/description-pull-request.png" alt="Imagem demonstrando a página para inserir as informações de título, descrição e quais as branchs quer mesclar (mergear)"></img>
 </p>
 
-Há mais informações na tela no qual você poderá atrituir a quem quer que faça a revisão, de quem é a tarefa ou assinada à quem, labels, qual projeto etc. Porém essas são informações para se utilizar futuramente.
+Há mais informações na tela no qual você poderá atribuir a quem quer que faça a revisão, de quem é a tarefa ou assinar à alguém, labels, de qual projeto etc. 
 
 **Observação: Caso sua branch esteja com código em andamento, poderá colocar no início do título a sigla WIP que significa Work in Progress, ou seja a pessoa responsável por aceitar seu pull request não ira mesclar até que esteja finalizado.
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="utils.js"></script>
+	<title>Document</title>
+</head>
+<script language="javascript">
+	// Criei essa função aqui apenas para demonstrar que é possível criar código JS dentro da tag script, porém é recomendado sempre usar um arquivo separado para tal.
+	// Como por exemplo eu faço o uso de outras funções que estão dentro do arquivo utils.js
+	function validar() {
+		if (isValidCPF(document.getElementById('cpf').value))
+			alert('CPF Válido');
+		else
+			alert('CPF Inválido');
+	}
+</script>
+
+<br>
+<form onsubmit="validar()">
+	<h1>Exemplo de validador de cpf</h1>
+	<label for="pwd">CPF:</label>
+	<!-- propriedade on keydown é para executar uma função sempre que o usuario pressionar uma tecla -->
+	<!-- As funções ValidaCPF() e fMasc( this, mCPF ) são funções que estão dentro do arquivo javascript que está sendo importado na tag script logo acima-->
+	<input type="text" id="cpf" value="" name="cpf" onkeydown="fMasc( this, mCPF );"
+		title="Digite o CPF no formato nnn.nnn.nnn-nn">
+		<!-- Aqui a validação ocorre de duas maneiras:
+			A primeira é com o uso do atributo type=submit que por sua vez entende que é um botão que executa a função de dentro do onsubmit da tag form.
+			E na tag form por sua vez chama a função validar() declarado dentro da tag script deste mesmo arquivo html.
+			Dentro da função validar() eu pego o conteúdo de dentro do campo input com document.getElementById('cpf').value e passo para a função isValidCPF().
+			A função isValidCPF() por sua vez, está dentro de utils.js, diferente da função validar() que está no escopo deste arquivo.
+			
+			Além disso faço uso também do atributo onClick do input abaixo. 
+			A função faz o uso do console.log() para printar no console do desenvolvedor, se o cpf é válido ou não.
+			Utilizando a função isValidCPF() da mesma forma que utilizei na linha 15.
+		-->
+	<input type="submit" value="Enviar" onclick="console.log('O cpf é válido?', isValidCPF(document.getElementById('cpf').value))">
+</form>
+</br>
+<button onclick="somaNumeros(5,7)">Testar função de somar números</button>
+<!-- Desafio vocês a criarem um botão que abre uma janela pedindo para o usuário digitar os dois números (pode ser um de cada vez) que quer que sejam somados e passar esse número para a função de somaNumeros
+Caso vocês consigam, abram um pull request
+-->
+</body>
+
+</html>
